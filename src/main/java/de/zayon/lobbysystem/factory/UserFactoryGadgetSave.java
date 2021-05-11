@@ -23,7 +23,7 @@ public class UserFactoryGadgetSave {
         table.append("`gadget` TEXT NOT NULL, ");
         table.append("`wins` INT(11) NOT NULL, ");
         table.append("PRIMARY KEY (`id`)");
-        this.lobbySystem.getDatabaseLib().executeUpdateAsync("CREATE TABLE IF NOT EXISTS zayon_bingo_stats (" + table.toString() + ")", resultSet -> {});
+        this.lobbySystem.getDatabaseLib().executeUpdateAsync("CREATE TABLE IF NOT EXISTS zayon_lobby (" + table.toString() + ")", resultSet -> {});
     }
 
     public CompletableFuture<Boolean> userExists(Player player) {
