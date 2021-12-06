@@ -1,8 +1,8 @@
 name: LobbySystem
 version: ${project.version}
-main: de.zayon.lobbysystem.LobbySystem
+main: de.nehlen.lobbysystem.LobbySystem
 api-version: 1.13
-depend: [MCCommons]
+depend: [MCCommons,GameAPI]
 authors: [DasNiklas]
 commands:
   build:
