@@ -2,10 +2,11 @@ package de.nehlen.lobbysystem;
 
 import de.exceptionflug.mccommons.config.shared.ConfigFactory;
 import de.exceptionflug.mccommons.config.spigot.SpigotConfig;
+import de.nehlen.gameapi.Gameapi;
+import de.nehlen.gameapi.util.DatabaseLib;
 import de.nehlen.lobbysystem.commands.BuildCommand;
 import de.nehlen.lobbysystem.commands.SetspawnCommand;
 import de.nehlen.lobbysystem.factory.UserFactoryGadgetSave;
-import de.nehlen.lobbysystem.factory.util.DatabaseLib;
 import de.nehlen.lobbysystem.listener.*;
 import de.nehlen.lobbysystem.manager.GroupManager;
 import de.nehlen.lobbysystem.manager.ScoreboardManager;
@@ -54,7 +55,7 @@ public final class LobbySystem extends JavaPlugin {
         this.scoreboardManager = new ScoreboardManager(this);
         this.groupManager = new GroupManager();
         this.serverManager = new ServerManager(this);
-        this.databaseLib = new DatabaseLib(this);
+        this.databaseLib = Gameapi.getGameapi().getDatabaseLib();
         this.userFactoryGadgetSave = new UserFactoryGadgetSave(this);
 
         this.foodLevelChangeListener = new FoodLevelChangeListener(this);
