@@ -7,7 +7,7 @@ The Spookly Lobby System is a custom Minecraft Paper 1.21+ plugin designed to se
 ## Installation and Setup
 ### Clone the Repository:
 ```shell
-git clone https://github.com/Spookly-Network/Lobby.git
+git clone https://github.com/Spookly-Network/SpooklyLobby.git
 ```
 
 ### Build the Plugin:
